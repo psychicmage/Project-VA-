@@ -1611,6 +1611,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 272725322}
+    - targetCorrespondingSourceObject: {fileID: 3701202431252008202, guid: 1b6d9920203cf204ca025db14635a195,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 272725329}
     - targetCorrespondingSourceObject: {fileID: 1934756542582598774, guid: 1b6d9920203cf204ca025db14635a195,
         type: 3}
       insertIndex: -1
@@ -1798,7 +1802,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1826,6 +1830,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 272725320}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &272725329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272725321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1844669f6c523d43b9ad36af5172161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 1769337597633466025, guid: 54ba44d4ecd83324991be29cf49b127d, type: 3}
+  notch: {fileID: 272725325}
 --- !u!4 &279356138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1766252923414055822, guid: 2fd78c3f6ca81f34f94506931f960a1d,
@@ -4998,7 +5016,6 @@ GameObject:
   - component: {fileID: 1103275670}
   - component: {fileID: 1103275669}
   - component: {fileID: 1103275668}
-  - component: {fileID: 1103275671}
   m_Layer: 9
   m_Name: String
   m_TagString: Untagged
@@ -5277,20 +5294,6 @@ LineRenderer:
   m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &1103275671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103275666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1844669f6c523d43b9ad36af5172161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 1769337597633466025, guid: 54ba44d4ecd83324991be29cf49b127d, type: 3}
-  notch: {fileID: 272725325}
 --- !u!4 &1135332816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7810434461426810354, guid: 2fd78c3f6ca81f34f94506931f960a1d,
