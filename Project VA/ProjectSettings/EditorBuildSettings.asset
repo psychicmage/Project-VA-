@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main VR Game Scene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/0.Title.unity
+    guid: 3a63bbf5b6f9047468394fefd947b819
   - enabled: 1
-    path: Assets/1.Asset Store/LowPolySciFiCity/Scenes/1.Town.unity
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 4906713253f10354fae51b4185135d40
+  - enabled: 1
+    path: Assets/Scenes/1.Town.unity
     guid: 726612b8345b1eb48bafc05b7cbbd27d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7f79fb918c04bdf478c8e01e815e26ca,
