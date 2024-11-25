@@ -26,8 +26,18 @@ public class pistol : MonoBehaviour
         {
             if (hitInfo.collider.tag == "Enemy") //근데 그게 적이야 
             {
+                if(!DroneAI.isDamaged)
+                    DroneAI.isDamaged = true;   
+                
                 Debug.Log("적 조준!");
-                NeutralEnemy.curHealth--;//체력 감소 
+                //체력 감소(드론) 
+                DroneAI drone = hitInfo.transform.GetComponent<DroneAI>();
+                if(drone)
+                {
+                    drone.OnDamageProcess();
+                }
+            
+                
 
             }
             else
