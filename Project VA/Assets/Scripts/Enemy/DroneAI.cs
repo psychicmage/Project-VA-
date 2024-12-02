@@ -25,6 +25,9 @@ public class DroneAI : MonoBehaviour
     public float attackDelayTime = 2;
 
     [SerializeField] int hp = 3;
+    public float damage = 1f;
+
+     Rigidbody rb;
 
 
 
@@ -33,6 +36,7 @@ public class DroneAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         player = GameObject.Find("XR Origin (VR)").transform;
         agent = GetComponent<NavMeshAgent>();
        // agent.enabled = false;
@@ -48,16 +52,16 @@ public class DroneAI : MonoBehaviour
         {
 
             agent.SetDestination(player.position);
-            if (Vector3.Distance(transform.position, player.position) < attackRange)
-            {
-                currentTime += Time.deltaTime;
-                if (currentTime > attackDelayTime)
-                {
-                    Debug.Log("공격 받음!");
-                    currentTime = 0;
-                }
+            //if (Vector3.Distance(transform.position, player.position) < attackRange)
+            //{
+            //    currentTime += Time.deltaTime;
+            //    if (currentTime > attackDelayTime)
+            //    {
+            //        Debug.Log("공격 받음!");
+            //        currentTime = 0;
+            //    }
 
-            }
+            //}
         }
 
         
