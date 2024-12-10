@@ -6,12 +6,6 @@ using UnityEngine.AI;
 
 public class DroneAI : MonoBehaviour
 {
-
-    
-
-
-
-    
     public float idleDelayTime = 2;
     float currentTime;
     public static bool isDamaged;
@@ -50,27 +44,11 @@ public class DroneAI : MonoBehaviour
         
         if (isDamaged)
         {
-
             agent.SetDestination(player.position);
-            //if (Vector3.Distance(transform.position, player.position) < attackRange)
-            //{
-            //    currentTime += Time.deltaTime;
-            //    if (currentTime > attackDelayTime)
-            //    {
-            //        Debug.Log("공격 받음!");
-            //        currentTime = 0;
-            //    }
-
-            //}
         }
 
         
     }
-
-    
-    
-  
-
     public void OnDamageProcess()
     {
         hp--;

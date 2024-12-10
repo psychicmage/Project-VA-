@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueWindowOnOff : MonoBehaviour
 {
     public GameObject player;
+    public Transform playerHead;
     public GameObject dialogue;
     bool isDialogueOn;
     public GameObject semi_dialogue;
@@ -15,6 +16,8 @@ public class DialogueWindowOnOff : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("XR Origin (VR)");
+        playerHead = GameObject.Find("Camera Offset").transform;
         isDialogueOn = false;
         semi_dialogue.SetActive(false);
         dialogue.SetActive(false);
@@ -30,6 +33,7 @@ public class DialogueWindowOnOff : MonoBehaviour
         if (distancToPlayer <= talkRange)
         {
             dialogue.SetActive(true);
+           
             
         }
         else if (distancToPlayer > talkRange) 
@@ -47,6 +51,8 @@ public class DialogueWindowOnOff : MonoBehaviour
             }
            
         }
+        dialogue.transform.LookAt(new Vector3(playerHead.position.x, dialogue.transform.position.y, playerHead.position.z));
+        dialogue.transform.forward *= -1;
     }
 
 

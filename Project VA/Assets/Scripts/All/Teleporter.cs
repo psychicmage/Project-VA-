@@ -31,8 +31,6 @@ public class Teleporter : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             StartCoroutine(NextStage(other));
-            
-
         }
     }
 
@@ -46,9 +44,9 @@ public class Teleporter : MonoBehaviour
         other.transform.position = new Vector3(position_x, 0, position_z);
         other.transform.rotation = Quaternion.Euler(0, rotation_y, 0);
         fadeScreen.FadeIn();
-        xrOrigin.GetComponent<SnapTurnProviderBase>().enabled = true;
         xrOrigin.GetComponent<ContinuousMoveProviderBase>().enabled = true;
-        
+        xrOrigin.GetComponent<SnapTurnProviderBase>().enabled = true;
+
 
 
     }

@@ -28,7 +28,7 @@ public class GameMainMenu : MonoBehaviour
 
     public void OnClickLoad()
     {
-        LoadingSceneController.LoadScene("1.Town");
+        LoadingSceneController.LoadScene("2.Dream");
         Debug.Log("계속하기");
     }
 
